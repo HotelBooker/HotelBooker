@@ -1,0 +1,62 @@
+<!DOCTYPE <!DOCTYPE html>
+
+<html>
+<head>
+	<title>Hotel Booker.</title>
+  <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+  <script>
+  $(function() {
+    $("#datepicker1,#datepicker2").datepicker();
+  });
+  </script>
+</head>
+  <body>
+
+
+<div class="logo">
+	<img src="img/logo.png" alt="HotelBooker" width="275px">
+</div>
+
+
+
+<div class="list">
+ 	<ul>
+	 	<div class ="column">
+	 		<li><p>CHECK IN DATE</p></li>	
+			<li><input type="text" id="datepicker1"></li>
+		</div>
+
+		<div class ="column">
+			<li><p>CHECK OUT DATE</p></li>
+			<li><input type="text" id="datepicker2"></li>
+		</div>
+
+		<div class ="column column75">
+			<li><p>ADULTS</p></li>
+			<li><input type="number" min="0" max="9999" name="Adults" placeholder="0" ></li>
+		</div>
+
+		<div class ="column column75">
+			<li><p>CHILDREN</p></li>
+			<li><input type="number" min="0" max="9999" name="Children" placeholder="0" ></li>
+		</div>
+
+		<div class ="column column75">
+			<li><p>ROOMS</p></li>
+			<li><input type="number" min="0" max="9999" name="Rooms" placeholder="0" ></li>
+		</div>
+	</ul>
+</div> 
+
+<div class="button">
+
+	<a href="#" class="myButton">SEARCH NOW</a>
+
+</div>
+  </body>
+</html>

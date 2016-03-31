@@ -1,0 +1,119 @@
+body{
+	background-color: #f1f1f1;
+	margin:0;
+	padding:0;
+}
+
+.logo{
+	  margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 70px;
+}
+
+.maintext{
+	font-family: 'Gotham';
+	font-weight: bold;
+	font-size: 20px;
+    color: #555555;
+    margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 120px;
+}
+
+.list{
+	height:90px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 680px;
+	text-align: center;
+}
+
+.list ul{
+	margin:0;
+	padding:0;
+}
+
+.list li {
+list-style-type: none;
+}
+
+
+.column{
+	width: 175px;
+	font-family: 'Gotham';
+	font-weight: bold;
+	font-size: 12px;
+    color: #555555;
+    float: left;
+}
+
+.column input{
+	width: 140px;
+}
+
+.column75 {
+	width: 110px;
+}
+
+.column75 input{
+	width: 75px;
+}
+
+p {
+
+float:left;
+margin-left: 18px;
+}
+
+
+
+.list li input{
+    padding:7px; 
+    border: 1px solid;
+    border-color: #fedb31; 
+    -webkit-border-radius: 1px;
+    border-radius: 5px;
+}
+
+
+.button{
+	
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.myButton {
+
+	-moz-box-shadow:inset 0px 39px 9px -24px #f4d06c;
+	-webkit-box-shadow:inset 0px 39px 9px -24px #f4d06c;
+	box-shadow:inset 0px 39px 9px -24px #f4d06c;
+	background-color:#f2be66;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	display:inline-block;
+	cursor:pointer;
+	color:#555555;
+	font-family:'Gotham';
+	font-size:12px;
+	font-weight: bold;
+	padding:8px 30px;
+	text-decoration:none;
+	
+}
+.myButton:hover {
+	background-color:#f2be66;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+input, textarea, select, a { outline: none; }
+ 
+
