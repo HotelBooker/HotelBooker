@@ -6,6 +6,8 @@
 
 <h1>Edit your room:</h1> 
   <form action="rooms.php" method="post">
+
+   <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
     <p>
         Floor:<br>
         <input type="number" name="floor" placeholder="<?php echo $_GET['floor']; ?>">
