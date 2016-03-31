@@ -30,24 +30,25 @@
 
   if (isset($_POST['submit'])){
     $sql_string = "INSERT INTO rooms (id, floor, room_number) VALUES ('$_POST[id]','$_POST[floor]','$_POST[room_number]')";
-    $result = mysql_query($sql_string);
+    $result = mysqli_query($conn, $sql_string);
   }
 
   else if(isset($_POST['update'])){
-    $sql_string = "UPDATE rooms SET floor =".$_POST['floor'].
-    ", room_number=" .$_POST['room_number'].
-    " where id = ".$_POST['id'];
-    $result = mysql_query($sql_string);
+    $sql_string = "UPDATE rooms SET floor =". $_POST['floor'].
+    ", room_number=" . $_POST['room_number'].
+    " where id = ". $_POST['id'];
+    $result = mysqli_query($conn, $sql_string);
   }
   
   else if (isset($_GET['id'])){
     $id = $_GET['id'];
     $sql_string =  "DELETE FROM rooms WHERE id = '$id' ";
-    mysql_query($sql_string);
+    mysqli_query($conn, $sql_string);
   }
 
+
   $sql_string = "SELECT * FROM rooms";
-  $roomData = mysql_query($sql_string,$con);
+  $roomData = mysqli_query($conn, $sql_string);
 
 
   echo "<table>";
@@ -56,7 +57,7 @@
   echo "<th>" . "room number" . "</th>";
   echo "</tr>";
 
-  while ($record = mysql_fetch_array($roomData)) {
+  while ($record = mysqli_fetch_array($roomData)) {
     echo "<tr>";
     echo "<td>" . $record['floor'] . "</td>"; 
     echo "<td>" . $record['room_number'] . "</td>";
@@ -67,7 +68,7 @@
 
   echo "</table>";
 
-  mysql_close($con);
+  $conn->close();
 ?>
 </body>
 </html>

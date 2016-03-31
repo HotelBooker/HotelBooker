@@ -1,10 +1,12 @@
 <?php
-    $con = mysql_connect('server3.tezzt.nl', 'hotelbooker', 'c96eb216c72cd36dd396785615e3eafd');
-    
-    if (!$con) {
-        die('Could not connect: ' . mysql_error());
-    }
-    
-    mysql_select_db('hotelbooker', $con) or die('Could not select database.');
+    $servername = "server3.tezzt.nl";
+    $username = "hotelbooker";
+    $password = "c96eb216c72cd36dd396785615e3eafd";
+    $databasename = "hotelbooker";
 
+    $conn = new mysqli($servername, $username, $password, $databasename);
+    
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }    
 ?>
