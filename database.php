@@ -1,5 +1,5 @@
 <?php
-    $con = mysql_connect('localhost', 'hotelbooker', 'c96eb216c72cd36dd396785615e3eafd');
+    $con = mysql_connect('server3.tezzt.nl', 'hotelbooker', 'c96eb216c72cd36dd396785615e3eafd');
     
     if (!$con) {
         die('Could not connect: ' . mysql_error());

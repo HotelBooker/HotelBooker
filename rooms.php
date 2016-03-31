@@ -20,6 +20,10 @@
   </form>
 
 <?php
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL); 
+
 
   include "database.php";
 
@@ -28,10 +32,14 @@
     $sql_string = "INSERT INTO rooms (id, floor, room_number) VALUES ('$_POST[id]','$_POST[floor]','$_POST[room_number]')";
     $result = mysql_query($sql_string);
   }
-  /*else if(isset($_POST['update'])){
-    $sql_string = "UPDATE rooms SET (id, floor, room_number) VALUES ('$record[id]','$_POST[floor]','$_POST[room_number]')";
+
+  else if(isset($_POST['update'])){
+    $sql_string = "UPDATE rooms SET floor =".$_POST['floor'].
+    ", room_number=" .$_POST['room_number'].
+    " where id = ".$_POST['id'];
     $result = mysql_query($sql_string);
-  }*/
+  }
+  
   else if (isset($_GET['id'])){
     $id = $_GET['id'];
     $sql_string =  "DELETE FROM rooms WHERE id = '$id' ";
