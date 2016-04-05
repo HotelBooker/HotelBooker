@@ -30,7 +30,8 @@ if ($count == 1){
 $_SESSION['username'] = $username;
 header("location:idx-Backend.html");
 }else{
-echo "Invalid Login Credentials.";
+echo "<script type='text/javascript'>alert('Wrong username or password')</script>";
+
 }
 }
 
@@ -51,7 +52,7 @@ echo "Invalid Login Credentials.";
       
      <div class="register-form">
 
-<div id="logohead"><img src="/img/logo.png" alt="logo"></div>
+<div id="logohead"><img src="/img/logo2.png" alt="logo" width="350"></div>
 <form action="" method="POST">
     <p><label> </label>
 	<input id="username" type="text" name="username" placeholder="username" /></p>
