@@ -24,7 +24,7 @@
 
 
 
-<div class="list">
+<form action="assets/search.php" method="post" class="list">
  	<ul>
 	 	<div class ="column">
 	 		<li><p>CHECK IN DATE</p></li>	
@@ -38,25 +38,26 @@
 
 		<div class ="column column75">
 			<li><p>ADULTS</p></li>
-			<li><input type="number" min="0" max="9999" name="Adults" placeholder="0" ></li>
+			<li><input type="number" min="0" max="9999" name="adults" placeholder="0" ></li>
 		</div>
 
 		<div class ="column column75">
 			<li><p>CHILDREN</p></li>
-			<li><input type="number" min="0" max="9999" name="Children" placeholder="0" ></li>
+			<li><input type="number" min="0" max="9999" name="children" placeholder="0" ></li>
 		</div>
 
 		<div class ="column column75">
 			<li><p>ROOMS</p></li>
-			<li><input type="number" min="0" max="9999" name="Rooms" placeholder="0" ></li>
+			<li><input type="number" min="0" max="9999" name="rooms" placeholder="0" ></li>
 		</div>
 	</ul>
-</div> 
+
+	<input type="submit" name="search" value="search">
+</form> 
 
 <div class="button">
-
-	<a href="#" class="myButton">SEARCH NOW</a>
-
+	<a type="submit" name="search" href="search.php" class="myButton">SEARCH NOW</a>
 </div>
+
   </body>
 </html>
