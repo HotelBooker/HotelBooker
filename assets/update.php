@@ -18,6 +18,21 @@
         <input type="number" name="room_number" placeholder="<?php echo $_GET['room_number']; ?>">
     </p>
 
+    <p>
+        Adults:<br>
+        <input type="number" name="adults" placeholder="<?php echo $_GET['adults']; ?>">
+    </p>
+
+    <p>
+        Children:<br>
+        <input type="number" name="children" placeholder="<?php echo $_GET['children']; ?>">
+    </p>
+
+    <p>
+        Beds:<br>
+        <input type="number" name="beds" placeholder="<?php echo $_GET['beds']; ?>">
+    </p>
+
     <input type="submit" name="update" value="update">
   </form>
 
