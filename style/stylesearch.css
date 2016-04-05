@@ -4,8 +4,25 @@ body{
 	padding:0;
 }
 
+h1 {
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 20px;
+	font-size: 18px;
+
+}
+
+h2{
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 10px;
+	font-size: 14px;
+
+
+}
+
 .logo{
-	  margin-left: auto;
+	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 	margin-top: 70px;
@@ -25,13 +42,34 @@ body{
 
 .room{
 	width: 960px;
-	height:300px;
+	height:275px;
 	background-color: none;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 20px;
+	margin-top: 80px;
 }
 
+.rooms{
+	float:left;
+	width: 150px;
+}
+
+.max{
+	float:right;
+	width: 250px;
+
+}
+
+.description{
+	float:left;
+}
+
+.price{
+	float:right;
+	margin-top: 7px;
+	font-style: italic;
+
+}
 
 .images{
 	float:left;
@@ -39,11 +77,10 @@ body{
 
 .text{
 	float:right;
-	width: 450px;
+	width: 412.5px;
 	height: 300px;
 	font-family: 'Gotham';
-	font-weight: bold;
-	font-size: 12px;
+	font-size: 14px;
     color: #555555;
 	
 
@@ -65,19 +102,15 @@ body{
 }
 
 .list li {
-list-style-type: none;
+	list-style-type: none;
 }
 
 input[type="text" ], textarea {
-
   background-color : #F5F5F5; 
-
 }
 
 input[type="number" ], textarea {
-
   background-color : #F5F5F5; 
-
 }
 
 
@@ -105,8 +138,8 @@ input[type="number" ], textarea {
 
 p {
 
-float:left;
-margin-left: 18px;
+	float:left;
+	margin-left: 18px;
 }
 
 
@@ -125,6 +158,13 @@ margin-left: 18px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+.button2{
+	float:left;
+	margin-top: 60px;
+	width: 300px;
+	
 }
 
 .myButton {
