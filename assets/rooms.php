@@ -5,7 +5,7 @@
 <body>
 
 <h1>Add a room:</h1> 
-  <form action="rooms.php" method="post">
+  <form action="" method="post">
     <p>
         Floor:<br>
         <input type="number" name="floor">
@@ -44,7 +44,7 @@
 
 
   if (isset($_POST['submit'])){
-    $sql_string = "INSERT INTO rooms (id, floor, room_number, adults, children, beds, check_in, check_out) VALUES ('$_POST[id]','$_POST[floor]','$_POST[room_number]','$_POST[adults]','$_POST[children]','$_POST[beds]','$_POST[check_in]','$_POST[check_out]')";
+    $sql_string = "INSERT INTO rooms (id, floor, room_number, adults, children, beds) VALUES ('$_POST[id]','$_POST[floor]','$_POST[room_number]','$_POST[adults]','$_POST[children]','$_POST[beds]')";
     $result = mysqli_query($conn, $sql_string);
   }
 
@@ -87,6 +87,8 @@
     echo "<td>" . $record['beds'] . "</td>";
     echo "<td>" . "<a href='rooms.php?id=" . $record['id'] . " ' name='delete'> delete  </a>" . "</td>";
     echo "<td>" . "<a href='update.php?id=" . $record['id'] . "&floor=" . $record['floor'] . "&room_number=" . $record['room_number'] . " ' name='update'> edit </a>" . "</td>";
+    echo "<td>" . "<a href='search.php?adults=" . $record['adults'] . "&children=" . $record['children'] . " ' name='search'> search </a>" . "</td>";
+ 
     echo "</tr>";
   }
 
