@@ -20,16 +20,24 @@ body{
 }
 
 .register-form form input{padding: 5px;}
-.register-form .btn{background: #726E6E;
-padding: 7px;
-border-radius: 5px;
-text-decoration: none;
-width: 50px;
-display: inline-block;
-color: #fff;}
+.register-form .btn{-moz-box-shadow:inset 0px 39px 9px -24px #f4d06c;
+	-webkit-box-shadow:inset 0px 39px 9px -24px #f4d06c;
+	box-shadow:inset 0px 39px 9px -24px #f4d06c;
+	background-color:#f2be66;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	display:inline-block;
+	cursor:pointer;
+	color:#555555;
+	font-family:'Gotham';
+	font-size:12px;
+	font-weight: bold;
+	padding:8px 30px;
+	text-decoration:none;}
 
 .register-form .btn:hover{
-	background-color:#8C8C8C;
+	background-color:#f2be66;
 	
 	
 	}
@@ -37,5 +45,19 @@ color: #fff;}
 border: 0;
 width: 60px;
 padding: 8px;
-}/* CSS Document */
+}
+
+.register-form . register:active {
+	position:relative;
+	top:1px;
+
+
+
+/* CSS Document */
+
+
+
+
+
+
 
