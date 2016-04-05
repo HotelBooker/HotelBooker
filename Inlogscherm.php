@@ -5,55 +5,37 @@
    
    <head>
       <title>HotelBooker</title>
-          <style>
-body{
-	background-image:url(Fotos/22.jpg);
-	
-	
-	}
-  .register-form{
-	width: 500px;
-	margin: 0 auto;
-	text-align: center;
-	padding: 10px;
-	color: #fff;
-	border-radius: 10px;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	
-}
-
-.register-form form input{padding: 5px;}
-.register-form .btn{background: #726E6E;
-padding: 7px;
-border-radius: 5px;
-text-decoration: none;
-width: 50px;
-display: inline-block;
-color: #FFF;}
-
-.register-form .btn:hover{
-	background-color:#8C8C8C;
-	
-	
-	}
-.register-form .register{
-border: 0;
-width: 60px;
-padding: 8px;
-}
-      </style>
+        
+        <link rel="stylesheet" type="text/css" href="style/style-Inlog.css">
       
    </head>
-<title>Naamloos document</title>
+<title>HotelBooker back-end</title>
 </head>
 
 <body>
 <?php
-   ob_start();
-   session_start();
+   include 'assets/database.php';
+    session_start();
 ?>
 
+<?php
+if (isset($_POST['username']) and isset($_POST['password'])){
+$username = $_POST['username'];
+$password = $_POST['password'];
+$query = "SELECT * FROM user WHERE username='$username' and password='$password'";
+$result = mysqli_query($conn, $query) or die(mysql_error());
+$count = mysqli_num_rows($result);
+
+if ($count == 1){
+$_SESSION['username'] = $username;
+header("location:idx-Backend.html");
+}else{
+echo "Invalid Login Credentials.";
+}
+}
+
+
+ ?>
 <?
    // error_reporting(E_ALL);
    // ini_set("display_errors", 1);
@@ -65,19 +47,16 @@ padding: 8px;
  
       
       <div class = "container">
+
       
      <div class="register-form">
-<?php
-	if(isset($msg) & !empty($msg)){
-		echo $msg;
-	}
- ?>
-<h1>Login</h1>
+
+<div id="logohead"><img src="/img/logo.png" alt="logo"></div>
 <form action="" method="POST">
-    <p><label>User Name : </label>
+    <p><label> </label>
 	<input id="username" type="text" name="username" placeholder="username" /></p>
  
-     <p><label>Password&nbsp;&nbsp; : </label>
+     <p><label> </label>
 	 <input id="password" type="password" name="password" placeholder="password" /></p>
  
     <input class="btn register" type="submit" name="submit" value="Login" />
@@ -88,6 +67,7 @@ padding: 8px;
          
          
       </div> 
+
       
    </body>
 </html>
