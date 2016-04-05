@@ -16,6 +16,21 @@
         <input type="number" name="room_number">
     </p>
 
+    <p>
+        Adults:<br>
+        <input type="number" name="adults">
+    </p>
+
+    <p>
+        Children:<br>
+        <input type="number" name="children">
+    </p>
+
+    <p>
+        Beds:<br>
+        <input type="number" name="beds">
+    </p>
+
     <input type="submit" name="submit">
   </form>
 
@@ -29,13 +44,16 @@
 
 
   if (isset($_POST['submit'])){
-    $sql_string = "INSERT INTO rooms (id, floor, room_number) VALUES ('$_POST[id]','$_POST[floor]','$_POST[room_number]')";
+    $sql_string = "INSERT INTO rooms (id, floor, room_number, adults, children, beds, check_in, check_out) VALUES ('$_POST[id]','$_POST[floor]','$_POST[room_number]','$_POST[adults]','$_POST[children]','$_POST[beds]','$_POST[check_in]','$_POST[check_out]')";
     $result = mysqli_query($conn, $sql_string);
   }
 
   else if(isset($_POST['update'])){
     $sql_string = "UPDATE rooms SET floor =". $_POST['floor'].
     ", room_number=" . $_POST['room_number'].
+    ", adults=" . $_POST['adults'].
+    ", children=" . $_POST['children'].
+    ", beds=" . $_POST['beds'].
     " where id = ". $_POST['id'];
     $result = mysqli_query($conn, $sql_string);
   }
@@ -55,12 +73,18 @@
   echo "<tr>";
   echo "<th>" . "floor" . "</th>";
   echo "<th>" . "room number" . "</th>";
+  echo "<th>" . "adults" . "</th>";
+  echo "<th>" . "children" . "</th>";
+  echo "<th>" . "beds" . "</th>";
   echo "</tr>";
 
   while ($record = mysqli_fetch_array($roomData)) {
     echo "<tr>";
     echo "<td>" . $record['floor'] . "</td>"; 
     echo "<td>" . $record['room_number'] . "</td>";
+    echo "<td>" . $record['adults'] . "</td>";
+    echo "<td>" . $record['children'] . "</td>";
+    echo "<td>" . $record['beds'] . "</td>";
     echo "<td>" . "<a href='rooms.php?id=" . $record['id'] . " ' name='delete'> delete  </a>" . "</td>";
     echo "<td>" . "<a href='update.php?id=" . $record['id'] . "&floor=" . $record['floor'] . "&room_number=" . $record['room_number'] . " ' name='update'> edit </a>" . "</td>";
     echo "</tr>";
