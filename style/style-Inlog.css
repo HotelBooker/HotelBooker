@@ -2,7 +2,7 @@
 
 
 body{
-	background-color:#FFFFFF;
+	background-color:#f1f1f1;
 	color:#000000;
 	
 	
@@ -16,6 +16,7 @@ body{
 	border-radius: 10px;
 	-webkit-border-radius:10px;
 	-moz-border-radius:10px;
+	
 	
 }
 
@@ -38,6 +39,7 @@ body{
 
 .register-form .btn:hover{
 	background-color:#f2be66;
+	color:#FFFFFF;
 	
 	
 	}
