@@ -1,11 +1,13 @@
 <?php
-<<<<<<< HEAD:idx-Backend.html
+
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL); 
 
 
-  include "database.php";
+  include "assets/database.php";
+  session_start();
+	include "assets/checklogin.php";
 
 
   if (isset($_POST['submit'])){
@@ -38,11 +40,8 @@
 
   $conn->close();
 ?>
-=======
-	session_start();
-	include("assets/checklogin.php");
-	?>
->>>>>>> cf1947ce7c54380f720499d6aeaa097875032067:admin.php
+
+	
 
 <!doctype html>
 <html>
@@ -82,13 +81,13 @@
     <th> Description </th>
   </tr>
   <tr>
-    <td><?php . $record['room_type'] . ?></td>
-    <td><?php . $record['room_number'] . ?></td>		
-    <td><?php . $record['adults'] . ?></td>
-    <td><?php . $record['children'] . ?></td>
-    <td><?php . $record['beds'] . ?></td>
-    <td><?php . $record['price'] . ?></td>
-    <td><?php . $record['description'] . ?></td>
+    <td><?php  $record['room_type']  ?></td>
+    <td><?php  $record['room_number']  ?></td>		
+    <td><?php  $record['adults']  ?></td>
+    <td><?php  $record['children']  ?></td>
+    <td><?php  $record['beds']  ?></td>
+    <td><?php  $record['price']  ?></td>
+    <td><?php  $record['description']  ?></td>
   </tr>
   <tr>
     <td>102</td>
