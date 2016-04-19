@@ -31,7 +31,7 @@ function search(){
                 echo "<h1>" . $record['room_type'] . "</h1>";
                 echo "<div class='rooms'><h2> Rooms: 1</div><div class='max'><h2>Adults: " . $record['adults'] . "</h2></div><div class='max'><h2>Children: " . $record['children'] . "</h2></div><br><br>";
                 echo "<div class='description'>" . $record['description'] . "</div>";
-                echo "<div style='margin-top: 160px'><div style='margin-top:0px' class='myButton'><a href='#' class='myButtonStyle'>BOOK NOW</a></div>";
+                echo "<div style='margin-top: 160px'><div style='margin-top:0px' class='myButton'><a href='form.html' class='myButtonStyle'>BOOK NOW</a></div>";
                 echo "<div class='price'> $" . $record['price'] . "/NIGHT</div></div>";
                 echo "</div> </div>";
             }

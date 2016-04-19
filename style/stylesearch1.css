@@ -266,9 +266,32 @@ p {
 }
 
 
+.myButton {
+
+	-moz-box-shadow:inset 0px 39px 9px -24px #f4d06c;
+	-webkit-box-shadow:inset 0px 39px 9px -24px #f4d06c;
+	box-shadow:inset 0px 39px 9px -24px #f4d06c;
+	background-color:#f2be66;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	display:inline-block;
+	cursor:pointer;
+	text-decoration:none;
+	margin-top: 50px;	
+}
 
 
-=======
+
+.myButtonStyle:hover {
+	color:white;
+}
+
+.myButtonStyle:active {
+	position:relative;
+	top:1px;
+}
+
 .myButtonStyle{
 	align-items: flex-start;
 	text-align: center;
@@ -304,7 +327,6 @@ p {
 	text-decoration:none;
 }
 
->>>>>>> 8952aba7175cfe832bbe48ba1aa69f5d6b8dc9fd
 input, textarea, select, a { outline: none; }
  
 

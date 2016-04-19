@@ -38,6 +38,10 @@
   $sql_string = "SELECT * FROM rooms";
   $roomData = mysqli_query($conn, $sql_string);
 
+
+
+
+
   $conn->close();
 ?>
 
@@ -80,15 +84,21 @@
     <th> Price </th>
     <th> Description </th>
   </tr>
-  <tr>
-    <td><?php  $record['room_type']  ?></td>
-    <td><?php  $record['room_number']  ?></td>		
-    <td><?php  $record['adults']  ?></td>
-    <td><?php  $record['children']  ?></td>
-    <td><?php  $record['beds']  ?></td>
-    <td><?php  $record['price']  ?></td>
-    <td><?php  $record['description']  ?></td>
-  </tr>
+  <?php 
+        while ($record = mysqli_fetch_array($roomData)) {
+    echo "<tr>";
+    echo "<td>" . $record['room_type'] . "</td>"; 
+    echo "<td>" . $record['room_number'] . "</td>";
+    echo "<td>" . $record['adults'] . "</td>";
+    echo "<td>" . $record['children'] . "</td>";
+    echo "<td>" . $record['beds'] . "</td>";
+    echo "<td>" . $record['price'] . "</td>";
+    echo "<td>" . $record['description'] . "</td>";
+    echo "<td>" . "<a href='rooms.php?id=" . $record['id'] . " ' name='delete'> delete </a></td>";
+    echo "<td>" . "<a href='update.php?id=" . $record['id'] . " ' name='update'> edit </a></td>";
+    echo "</tr>";
+  }
+  ?>
   <tr>
     <td>102</td>
     <td>Jackson</td>		
