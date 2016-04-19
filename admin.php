@@ -1,11 +1,11 @@
 <?php
+<<<<<<< HEAD:idx-Backend.html
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL); 
 
 
-
-  include "assets/database.php";
+  include "database.php";
 
 
   if (isset($_POST['submit'])){
@@ -36,9 +36,13 @@
   $sql_string = "SELECT * FROM rooms";
   $roomData = mysqli_query($conn, $sql_string);
 
-
   $conn->close();
 ?>
+=======
+	session_start();
+	include("assets/checklogin.php");
+	?>
+>>>>>>> cf1947ce7c54380f720499d6aeaa097875032067:admin.php
 
 <!doctype html>
 <html>
@@ -57,7 +61,11 @@
   <li><a class="active" href="#dash">Dashboard</a></li>
   <li><a href="#rooms">Add Rooms</a></li>
   <li><a href="#pay">Payment</a></li>
-  <li><a href="#set">Settings</a></li>
+  <li><br></li>
+  <li><br></li>
+  <li><br></li>
+  <li><a class="out" href="assets/logout.php">Log out</a></li>
+  
 </ul>
 
 <div id="content">
@@ -73,23 +81,25 @@
     <th> Price </th>
     <th> Description </th>
   </tr>
-  <?php     
-
-      while ($record = mysqli_fetch_array($roomData)) {
-      echo "<tr>";
-      echo "<td>" . $record['room_type'] . "</td>"; 
-      echo "<td>" . $record['room_number'] . "</td>";
-      echo "<td>" . $record['adults'] . "</td>";
-      echo "<td>" . $record['children'] . "</td>";
-      echo "<td>" . $record['beds'] . "</td>";
-      echo "<td>" . $record['price'] . "</td>";
-      echo "<td>" . $record['description'] . "</td>";
-      echo "<td>" . "<a href='rooms.php?id=" . $record['id'] . " ' name='delete'> delete </a></td>";
-      echo "<td>" . "<a href='update.php?id=" . $record['id'] . " ' name='update'> edit </a></td>";
-      echo "</tr>";
-    }   
-    ?>
-
+  <tr>
+    <td><?php . $record['room_type'] . ?></td>
+    <td><?php . $record['room_number'] . ?></td>		
+    <td><?php . $record['adults'] . ?></td>
+    <td><?php . $record['children'] . ?></td>
+    <td><?php . $record['beds'] . ?></td>
+    <td><?php . $record['price'] . ?></td>
+    <td><?php . $record['description'] . ?></td>
+  </tr>
+  <tr>
+    <td>102</td>
+    <td>Jackson</td>		
+    <td>pending</td>
+  </tr>
+  <tr>
+    <td>103</td>
+    <td>Doe</td>		
+    <td>pending</td>
+  </tr>
 </table>
 
 

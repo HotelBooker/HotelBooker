@@ -199,14 +199,17 @@ p {
 	border-radius:6px;
 	display:inline-block;
 	cursor:pointer;
-	padding:8px 30px;
 	text-decoration:none;
 	margin-top: 50px;	
 }
-.myButton:hover {
-	background-color:#f2be66;
+
+
+
+.myButtonStyle:hover {
+	color:white;
 }
-.myButton:active {
+
+.myButtonStyle:active {
 	position:relative;
 	top:1px;
 }
@@ -216,10 +219,7 @@ p {
 	text-align: center;
 	cursor: default;
 	color: buttontext;
-	padding-top: 2px;
-	padding-right: 6px;
-	padding-bottom: 3px;
-	padding-left: 6px;
+	padding:8px 30px;
 	border-top-width: 2px;
 	border-right-width: 2px;
 	border-bottom-width: 2px;
