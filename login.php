@@ -4,34 +4,7 @@
 <meta charset="utf-8">
    
    <head>
-    <?  function fnlogout($field)
-{
-    $t = time();
-    if (!isset($_SESSION[$field]))
-        $_SESSION[$field] = time();
-    $t0 = $_SESSION[$field];
-    $diff = $t - $t0;
-    if ($diff > 60)
-    {        
-        return true;
-    }enter code here
-    else
-    {
-        return false;
-    }
-}
-function fnheader()
-{
-    if(fnlogout("user_time"))
-    {
-        session_unset();
-        session_destroy();
-        header("location:login.php?action=expired");
-        exit;
-    }
-}
 
-?>
       <title>HotelBooker</title>
         
         <link rel="stylesheet" type="text/css" href="style/style-Inlog.css">
